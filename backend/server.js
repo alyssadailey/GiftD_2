@@ -14,9 +14,9 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 
 // Protected routes example:
-const protectedRoutes = require('./routes/protected'); // your protected routes file
+// const protectedRoutes = require('./routes/protected'); // your protected routes file
 
-app.use('/api/protected', authenticateToken, protectedRoutes);
+// app.use('/api/protected', authenticateToken, protectedRoutes);
 
 //  Syncs DB and start server
 sequelize.sync({ alter: true }).then(() => {
