@@ -19,7 +19,7 @@ app.use('/api/auth', authRoutes);
 // app.use('/api/protected', authenticateToken, protectedRoutes);
 
 //  Syncs DB and start server
-sequelize.sync({ alter: true }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   console.log('✅ Connected to DB and synced models.');
   app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
